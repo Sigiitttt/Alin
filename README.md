@@ -1,7 +1,7 @@
 # Komputasi Aljabar Linier
 
 ## Deskripsi
-Repository ini berisi tugas-tugas dan proyek-proyek yang dikerjakan sebagai bagian dari mata kuliah Komputasi Aljabar Linier di [Your University]. Tujuan dari mata kuliah ini adalah untuk memberikan pemahaman mendalam tentang konsep-konsep aljabar linier dan penerapannya dalam komputasi.
+Haloo All.... Saya Moch Sigit Aringga Sebagai seorang mahaiswa Teknik Informatika Repository ini berisi tugas-tugas dan proyek-proyek yang dikerjakan sebagai bagian dari mata kuliah Komputasi Aljabar Linier di Semester 2. Tujuan dari mata kuliah ini adalah untuk memberikan pemahaman mendalam tentang konsep-konsep aljabar linier dan penerapannya dalam komputasi.
 
 ## Struktur Repository
 - `notebooks/`: Berisi Jupyter Notebooks yang digunakan untuk eksperimen dan analisis.
