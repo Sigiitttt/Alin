@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'aplikasikal';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -434,17 +436,21 @@ document.write(`
 <section id="distribusi-awal">
 <h3>1. Distribusi Awal<a class="headerlink" href="#distribusi-awal" title="Link to this heading">#</a></h3>
 <p>Pada awalnya, kepentingan (PageRank) setiap halaman web didistribusikan secara merata. Misalnya, jika ada 4 halaman web, maka setiap halaman akan memiliki nilai awal PageRank sebesar 1/4 atau 0.25. Vektor peringkat awal, (\mathbf{v}), adalah:
-[ \mathbf{v} = \begin{pmatrix} 0.25 \ 0.25 \ 0.25 \ 0.25 \end{pmatrix} ]</p>
+$<span class="math notranslate nohighlight">\(
+{v} = \begin{pmatrix} 0.25 \\ 0.25 \\ 0.25 \\ 0.25 \end{pmatrix}
+\)</span>$</p>
 </section>
 <section id="matriks-transisi">
 <h3>2. Matriks Transisi<a class="headerlink" href="#matriks-transisi" title="Link to this heading">#</a></h3>
 <p>Matriks transisi (A) menggambarkan kemungkinan berpindah dari satu halaman ke halaman lain melalui tautan. Misalkan kita memiliki matriks transisi (A) sebagai berikut:
-[ A = \begin{pmatrix}
-0 &amp; 0 &amp; 1 &amp; 0.5 \
-0.5 &amp; 0 &amp; 0.5 &amp; 0 \
-0.5 &amp; 0.5 &amp; 0 &amp; 0 \
-0 &amp; 0.5 &amp; 0 &amp; 0.5 \
-\end{pmatrix} ]
+$<span class="math notranslate nohighlight">\(
+A = \begin{pmatrix}
+0 &amp; 0 &amp; 1 &amp; 0.5 \\
+0.5 &amp; 0 &amp; 0.5 &amp; 0 \\
+0.5 &amp; 0.5 &amp; 0 &amp; 0 \\
+0 &amp; 0.5 &amp; 0 &amp; 0.5 \\
+\end{pmatrix}
+\)</span>$
 Setiap elemen (A_{ij}) dalam matriks ini menunjukkan probabilitas berpindah dari halaman (j) ke halaman (i).</p>
 </section>
 <section id="iterasi-pembaruan-peringkat">
@@ -463,20 +469,26 @@ Kita ulangi proses ini dengan mengalikan matriks (A) dengan hasil dari iterasi s
 <section id="iterasi-selanjutnya">
 <h4>Iterasi Selanjutnya<a class="headerlink" href="#iterasi-selanjutnya" title="Link to this heading">#</a></h4>
 <p>Proses ini dilanjutkan hingga vektor peringkat tidak berubah secara signifikan antara iterasi, yang menunjukkan bahwa PageRank telah mencapai keseimbangan. Berikut adalah hasil beberapa iterasi berikutnya:
-[ A^3 \mathbf{v} = \begin{pmatrix} 0.35 \ 0.14 \ 0.29 \ 0.20 \end{pmatrix} ]
-[ A^4 \mathbf{v} = \begin{pmatrix} 0.39 \ 0.11 \ 0.29 \ 0.19 \end{pmatrix} ]
-[ A^5 \mathbf{v} = \begin{pmatrix} 0.39 \ 0.11 \ 0.29 \ 0.19 \end{pmatrix} ]
-[ A^6 \mathbf{v} = \begin{pmatrix} 0.38 \ 0.13 \ 0.29 \ 0.19 \end{pmatrix} ]
-[ A^7 \mathbf{v} = \begin{pmatrix} 0.38 \ 0.12 \ 0.29 \ 0.19 \end{pmatrix} ]
-[ A^8 \mathbf{v} = \begin{pmatrix} 0.38 \ 0.12 \ 0.29 \ 0.19 \end{pmatrix} ]</p>
+$<span class="math notranslate nohighlight">\(
+A^3 \mathbf{v} = \begin{pmatrix} 0.35 \\ 0.14 \\ 0.29 \\ 0.20 \end{pmatrix}
+A^4 \mathbf{v} = \begin{pmatrix} 0.39 \\ 0.11 \\ 0.29 \\ 0.19 \end{pmatrix}
+A^5 \mathbf{v} = \begin{pmatrix} 0.39 \\ 0.11 \\ 0.29 \\ 0.19 \end{pmatrix}
+ A^6 \mathbf{v} = \begin{pmatrix} 0.38 \\ 0.13 \\ 0.29 \\ 0.19 \end{pmatrix}
+A^7 \mathbf{v} = \begin{pmatrix} 0.38 \\ 0.12 \\ 0.29 \\ 0.19 \end{pmatrix}
+A^8 \mathbf{v} = \begin{pmatrix} 0.38 \\ 0.12 \\ 0.29 \\ 0.19 \end{pmatrix}
+\)</span>$</p>
 </section>
 </section>
 <section id="konvergensi">
 <h3>4. Konvergensi<a class="headerlink" href="#konvergensi" title="Link to this heading">#</a></h3>
 <p>Setelah beberapa iterasi, vektor peringkat stabil pada nilai tertentu. Ini disebut sebagai nilai keseimbangan atau PageRank akhir. Nilai PageRank akhir adalah:
-[ \mathbf{v^*} = \begin{pmatrix} 0.38 \ 0.12 \ 0.29 \ 0.19 \end{pmatrix} ]</p>
-<p>Tentu, kita akan mengganti nilai awal vektor peringkat (v) dengan nilai yang berbeda dan melihat bagaimana iterasi PageRank bekerja. Misalkan kita mulai dengan distribusi awal yang berbeda, seperti:
-[ \mathbf{v} = \begin{pmatrix} 0.4 \ 0.3 \ 0.2 \ 0.1 \end{pmatrix} ]</p>
+$<span class="math notranslate nohighlight">\(
+{v^*} = \begin{pmatrix} 0.38 \\ 0.12 \\ 0.29 \\ 0.19 \end{pmatrix}
+\)</span>$</p>
+<p>kita akan mengganti nilai awal vektor peringkat (v) dengan nilai yang berbeda dan melihat bagaimana iterasi PageRank bekerja. Misalkan kita mulai dengan distribusi awal yang berbeda, seperti:
+$<span class="math notranslate nohighlight">\(
+mathbf{v} = \begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}
+\)</span>$</p>
 <p>Berikut adalah penjelasan dan penyelesaian lengkap dengan perubahan nilai awal vektor peringkat.</p>
 </section>
 </section>
@@ -491,50 +503,61 @@ Kita ulangi proses ini dengan mengalikan matriks (A) dengan hasil dari iterasi s
 <li><p>C menautkan ke B dan D</p></li>
 <li><p>D menautkan ke C</p></li>
 </ul>
-<p>Buat matriks transisi (A) dan hitung nilai PageRank setelah beberapa iterasi menggunakan algoritma PageRank dengan nilai awal vektor peringkat (\mathbf{v}) sebagai (\begin{pmatrix} 0.4 \ 0.3 \ 0.2 \ 0.1 \end{pmatrix}).</p>
+<p>Buat matriks transisi (A) dan hitung nilai PageRank setelah beberapa iterasi menggunakan algoritma PageRank dengan nilai awal vektor peringkat (\mathbf{v}) sebagai
+$<span class="math notranslate nohighlight">\(
+(\begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}\)
+\)</span>$</p>
 </section>
 <section id="penyelesaian">
 <h3>Penyelesaian<a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p><strong>Matriks Transisi (A):</strong>
-[
-A = \begin{pmatrix}
+$$</p>
+<p>A = \begin{pmatrix}
 0 &amp; 1 &amp; 0 &amp; 0 \
 0.5 &amp; 0 &amp; 0.5 &amp; 0 \
 0 &amp; 0 &amp; 0 &amp; 1 \
 0.5 &amp; 0 &amp; 0.5 &amp; 0 \
 \end{pmatrix}
-]</p></li>
-<li><p><strong>Distribusi Awal:</strong>
-[
-\mathbf{v} = \begin{pmatrix} 0.4 \ 0.3 \ 0.2 \ 0.1 \end{pmatrix}
-]</p></li>
-<li><p><strong>Iterasi Pembaruan Peringkat:</strong>
-[
-\mathbf{Av} = A \cdot \mathbf{v} = \begin{pmatrix} 0.3 \ 0.3 \ 0.1 \ 0.3 \end{pmatrix}
-]</p>
-<p>[
-A^2 \mathbf{v} = A \cdot (\mathbf{Av}) = \begin{pmatrix} 0.3 \ 0.2 \ 0.3 \ 0.2 \end{pmatrix}
-]</p>
-<p>[
-A^3 \mathbf{v} = A \cdot (A^2 \mathbf{v}) = \begin{pmatrix} 0.2 \ 0.3 \ 0.2 \ 0.3 \end{pmatrix}
-]</p>
-<p>[
-A^4 \mathbf{v} = A \cdot (A^3 \mathbf{v}) = \begin{pmatrix} 0.3 \ 0.2 \ 0.3 \ 0.2 \end{pmatrix}
-]</p>
+$$</p>
 </li>
+<li><p><strong>Distribusi Awal:</strong>
+$<span class="math notranslate nohighlight">\(
+{v} = \begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}
+\)</span>$</p></li>
+<li><p><strong>Iterasi Pembaruan Peringkat:</strong>
+$<span class="math notranslate nohighlight">\(
+f{Av} = A \cdot \mathbf{v} = \begin{pmatrix} 0.3 \\ 0.3 \\ 0.1 \\ 0.3 \end{pmatrix}
+\)</span>$</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   A^2 \mathbf{v} = A \cdot (\mathbf{Av}) = \begin{pmatrix} 0.3 \\ 0.2 \\ 0.3 \\ 0.2 \end{pmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   A^3 \mathbf{v} = A \cdot (A^2 \mathbf{v}) = \begin{pmatrix} 0.2 \\ 0.3 \\ 0.2 \\ 0.3 \end{pmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   A^4 \mathbf{v} = A \cdot (A^3 \mathbf{v}) = \begin{pmatrix} 0.3 \\ 0.2 \\ 0.3 \\ 0.2 \end{pmatrix}
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
 <li><p><strong>Konvergensi:</strong>
 Setelah beberapa iterasi, nilai PageRank tidak berubah signifikan dan tetap sama, yaitu:
-[
-\mathbf{v^*} = \begin{pmatrix} 0.3 \ 0.2 \ 0.3 \ 0.2 \end{pmatrix}
-]</p></li>
+$<span class="math notranslate nohighlight">\(
+\mathbf{v^*} = \begin{pmatrix} 0.3 \\ 0.2 \\ 0.3 \\ 0.2 \end{pmatrix}
+\)</span>$</p></li>
 </ol>
 <p>Dalam kasus ini, nilai PageRank akhirnya menunjukkan bahwa halaman A dan C memiliki kepentingan yang sama, sedangkan halaman B dan D juga memiliki kepentingan yang sama namun lebih rendah dibandingkan A dan C.</p>
 </section>
 </section>
 <section id="penyelesaian-dengan-python">
 <h2>Penyelesaian dengan Python<a class="headerlink" href="#penyelesaian-dengan-python" title="Link to this heading">#</a></h2>
-<p>Berikut adalah implementasi PageRank menggunakan Python dengan nilai awal vektor peringkat (\mathbf{v}) sebagai (\begin{pmatrix} 0.4 \ 0.3 \ 0.2 \ 0.1 \end{pmatrix}):</p>
+<p>Berikut adalah implementasi PageRank menggunakan Python dengan nilai awal vektor peringkat (\mathbf{v}) sebagai
+$<span class="math notranslate nohighlight">\(
+(\begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}\)
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
