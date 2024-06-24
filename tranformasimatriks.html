@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Transformasi Matriks &#8212; My sample book</title>
+    <title>Tugas 5 - Transformasi Matriks &#8212; My sample book</title>
   
   
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tranformasimatriks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="page rank" href="aplikasikal.html" />
+    <link rel="next" title="Tugas 6 - page range" href="aplikasikal.html" />
     <link rel="prev" title="Tugas 4 - Determinan Matriks" href="Determinan%20matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -185,9 +185,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas2.html"><strong>Tugas 2 - Aljabar Matriks</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas3.html"><strong>Tugas 3 - Matriks Invers</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Determinan%20matriks.html"><strong>Tugas 4 - Determinan Matriks</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Transformasi Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="aplikasikal.html"><strong>page rank</strong></a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 5 - Transformasi Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="aplikasikal.html"><strong>Tugas 6 - page range</strong></a></li>
 </ul>
 
     </div>
@@ -373,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Transformasi Matriks</h1>
+    <h1>Tugas 5 - Transformasi Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -400,8 +399,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="transformasi-matriks">
-<h1><strong>Transformasi Matriks</strong><a class="headerlink" href="#transformasi-matriks" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5-transformasi-matriks">
+<h1><strong>Tugas 5 - Transformasi Matriks</strong><a class="headerlink" href="#tugas-5-transformasi-matriks" title="Link to this heading">#</a></h1>
 <p>Transformasi matriks adalah operasi yang mengubah vektor dalam ruang menggunakan matriks. Contoh umum transformasi termasuk rotasi, skala, refleksi, dan translasi.</p>
 <section id="jenis-jenistransformasi-matriks">
 <h2><strong>Jenis-jenisTransformasi Matriks</strong><a class="headerlink" href="#jenis-jenistransformasi-matriks" title="Link to this heading">#</a></h2>
@@ -411,7 +410,8 @@ document.write(`
 <p>Rotasi matriks mengubah arah vektor dengan memutar vektor di sekitar titik asal. Untuk rotasi 2D dengan sudut θ:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-[ R(\theta) = \begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta \end{pmatrix} ]
+R(\theta) =
+\begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta \end{pmatrix}
 \end{split}\]</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -436,10 +436,12 @@ document.write(`
 <p>Skala matriks mengubah ukuran vektor dengan memperbesar atau memperkecil vektor.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-[ S = \begin{pmatrix} s_x &amp; 0 \\ 0 &amp; s_y \end{pmatrix} ]
+S =
+\begin{pmatrix}
+s_x &amp; 0 \\
+0 &amp; s_y \end{pmatrix}
 \end{split}\]</div>
-<p><br />
-Di mana (s_x) dan (s_y) adalah faktor skala sepanjang sumbu-x dan sumbu-y.</p>
+<p>Di mana <span class="math notranslate nohighlight">\((s_x)\)</span> dan <span class="math notranslate nohighlight">\((s_y)\)</span> adalah faktor skala sepanjang sumbu-x dan sumbu-y.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale_vector</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">sx</span><span class="p">,</span> <span class="n">sy</span><span class="p">):</span>
     <span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
         <span class="p">[</span><span class="n">sx</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -460,11 +462,11 @@ Di mana (s_x) dan (s_y) adalah faktor skala sepanjang sumbu-x dan sumbu-y.</p>
 <p>Refleksi matriks mengubah vektor dengan mencerminkan vektor terhadap sumbu tertentu.</p>
 <p>Rumus (Refleksi terhadap sumbu-x):
 $<span class="math notranslate nohighlight">\(
-[ F_x = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} ]
+F_x = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}
 \)</span>$</p>
 <p>Rumus (Refleksi terhadap sumbu-y):
 $<span class="math notranslate nohighlight">\(
-[ F_y = \begin{pmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} ]
+F_y = \begin{pmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
 \)</span>$</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reflect_vector</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">axis</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
@@ -517,13 +519,19 @@ $<span class="math notranslate nohighlight">\(
 <p>Transformasi geser mengubah bentuk vektor dengan menggesernya sepanjang sumbu-x atau sumbu-y.</p>
 <p>Rumus (Shear horizontal):
 $<span class="math notranslate nohighlight">\(
-[ Sh_x = \begin{pmatrix} 1 &amp; k_x \\ 0 &amp; 1 \end{pmatrix} ]
+Sh_x =
+\begin{pmatrix}
+1 &amp; k_x
+\\ 0 &amp; 1 \end{pmatrix}
 \)</span>$</p>
 <p>Rumus (Shear vertikal):
 $<span class="math notranslate nohighlight">\(
-[ Sh_y = \begin{pmatrix} 1 &amp; 0 \\ k_y &amp; 1 \end{pmatrix} ]
-\)</span>$
-Di mana (k_x) dan (k_y) adalah faktor geser horizontal dan vertikal.</p>
+Sh_y =
+\begin{pmatrix}
+1 &amp; 0 \\
+k_y &amp; 1 \end{pmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Di mana \)</span>(k_x)<span class="math notranslate nohighlight">\( dan \)</span>(k_y)$ adalah faktor geser horizontal dan vertikal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -721,7 +729,7 @@ Scaled vector: [-2.  3.]
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>page rank</strong></p>
+        <p class="prev-next-title"><strong>Tugas 6 - page range</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

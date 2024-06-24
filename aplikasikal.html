@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>page rank &#8212; My sample book</title>
+    <title>Tugas 6 - page range &#8212; My sample book</title>
   
   
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'aplikasikal';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Transformasi Matriks" href="tranformasimatriks.html" />
+    <link rel="prev" title="Tugas 5 - Transformasi Matriks" href="tranformasimatriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,9 +184,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas2.html"><strong>Tugas 2 - Aljabar Matriks</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas3.html"><strong>Tugas 3 - Matriks Invers</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Determinan%20matriks.html"><strong>Tugas 4 - Determinan Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tranformasimatriks.html"><strong>Transformasi Matriks</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>page rank</strong></a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="tranformasimatriks.html"><strong>Tugas 5 - Transformasi Matriks</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 6 - page range</strong></a></li>
 </ul>
 
     </div>
@@ -372,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>page rank</h1>
+    <h1>Tugas 6 - page range</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,8 +381,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>page rank</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank-dengan-pendekatan-sistem-dinamis">Algoritma PageRank dengan Pendekatan Sistem Dinamis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank-dengan-pendekatan-sistem-dinamis"><strong>Algoritma PageRank dengan Pendekatan Sistem Dinamis</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">Pendahuluan</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-dasar-pagerank">Konsep Dasar PageRank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-algoritma-pagerank">Langkah-langkah Algoritma PageRank</a><ul class="nav section-nav flex-column">
@@ -400,15 +398,12 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-dan-penyelesaian">Contoh Soal dan Penyelesaian</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian"><strong>Penyelesaian</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-dengan-python">Penyelesaian dengan Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -419,11 +414,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="page-rank">
-<h1><strong>page rank</strong><a class="headerlink" href="#page-rank" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-6-page-range">
+<h1><strong>Tugas 6 - page range</strong><a class="headerlink" href="#tugas-6-page-range" title="Link to this heading">#</a></h1>
+<section id="algoritma-pagerank-dengan-pendekatan-sistem-dinamis">
+<h2><strong>Algoritma PageRank dengan Pendekatan Sistem Dinamis</strong><a class="headerlink" href="#algoritma-pagerank-dengan-pendekatan-sistem-dinamis" title="Link to this heading">#</a></h2>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="algoritma-pagerank-dengan-pendekatan-sistem-dinamis">
-<h1>Algoritma PageRank dengan Pendekatan Sistem Dinamis<a class="headerlink" href="#algoritma-pagerank-dengan-pendekatan-sistem-dinamis" title="Link to this heading">#</a></h1>
 <section id="pendahuluan">
 <h2>Pendahuluan<a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h2>
 <p>Algoritma PageRank adalah metode yang digunakan oleh mesin pencari Google untuk menentukan peringkat halaman web berdasarkan jumlah dan kualitas tautan yang menuju ke halaman tersebut. Dalam penjelasan ini, kita akan membahas bagaimana PageRank bekerja menggunakan pendekatan sistem dinamis dan menyertakan contoh soal beserta penyelesaiannya, termasuk solusi menggunakan Python.</p>
@@ -436,14 +431,19 @@ document.write(`
 <h2>Langkah-langkah Algoritma PageRank<a class="headerlink" href="#langkah-langkah-algoritma-pagerank" title="Link to this heading">#</a></h2>
 <section id="distribusi-awal">
 <h3>1. Distribusi Awal<a class="headerlink" href="#distribusi-awal" title="Link to this heading">#</a></h3>
-<p>Pada awalnya, kepentingan (PageRank) setiap halaman web didistribusikan secara merata. Misalnya, jika ada 4 halaman web, maka setiap halaman akan memiliki nilai awal PageRank sebesar 1/4 atau 0.25. Vektor peringkat awal, (\mathbf{v}), adalah:
+<p>Pada awalnya, kepentingan (PageRank) setiap halaman web didistribusikan secara merata. Misalnya, jika ada 4 halaman web, maka setiap halaman akan memiliki nilai awal PageRank sebesar 1/4 atau 0.25. Vektor peringkat awal, <span class="math notranslate nohighlight">\((\mathbf{v})\)</span>, adalah:
 $<span class="math notranslate nohighlight">\(
-{v} = \begin{pmatrix} 0.25 \\ 0.25 \\ 0.25 \\ 0.25 \end{pmatrix}
+{v} =
+\begin{pmatrix}
+0.25 \\
+0.25 \\
+0.25 \\
+0.25 \end{pmatrix}
 \)</span>$</p>
 </section>
 <section id="matriks-transisi">
 <h3>2. Matriks Transisi<a class="headerlink" href="#matriks-transisi" title="Link to this heading">#</a></h3>
-<p>Matriks transisi (A) menggambarkan kemungkinan berpindah dari satu halaman ke halaman lain melalui tautan. Misalkan kita memiliki matriks transisi (A) sebagai berikut:</p>
+<p>Matriks transisi <span class="math notranslate nohighlight">\((A)\)</span> menggambarkan kemungkinan berpindah dari satu halaman ke halaman lain melalui tautan. Misalkan kita memiliki matriks transisi <span class="math notranslate nohighlight">\((A)\)</span> sebagai berikut:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 A = \begin{pmatrix}
@@ -453,43 +453,71 @@ A = \begin{pmatrix}
 0 &amp; 0.5 &amp; 0 &amp; 0.5 \\
 \end{pmatrix}
 \end{split}\]</div>
-<p>Setiap elemen (A_{ij}) dalam matriks ini menunjukkan probabilitas berpindah dari halaman (j) ke halaman (i).</p>
+<p>Setiap elemen <span class="math notranslate nohighlight">\((A_{ij})\)</span> dalam matriks ini menunjukkan probabilitas berpindah dari halaman <span class="math notranslate nohighlight">\((j)\)</span> ke halaman <span class="math notranslate nohighlight">\((i)\)</span>.</p>
 </section>
 <section id="iterasi-pembaruan-peringkat">
 <h3>3. Iterasi Pembaruan Peringkat<a class="headerlink" href="#iterasi-pembaruan-peringkat" title="Link to this heading">#</a></h3>
-<p>Untuk memperbarui nilai PageRank, kita kalikan matriks transisi (A) dengan vektor peringkat saat ini (\mathbf{v}). Proses ini diulangi beberapa kali hingga nilai PageRank konvergen atau stabil.</p>
+<p>Untuk memperbarui nilai PageRank, kita kalikan matriks transisi <span class="math notranslate nohighlight">\((A)\)</span> dengan vektor peringkat saat ini <span class="math notranslate nohighlight">\((\mathbf{v})\)</span>. Proses ini diulangi beberapa kali hingga nilai PageRank konvergen atau stabil.</p>
 <section id="iterasi-pertama">
 <h4>Iterasi Pertama<a class="headerlink" href="#iterasi-pertama" title="Link to this heading">#</a></h4>
-<p>[ \mathbf{Av} = A \cdot \mathbf{v} = \begin{pmatrix} 0.37 \ 0.08 \ 0.33 \ 0.20 \end{pmatrix} ]
-Di sini, kita mengalikan matriks (A) dengan vektor (\mathbf{v}) untuk mendapatkan vektor peringkat yang baru.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{Av} = A \cdot \mathbf{v} =
+\begin{pmatrix}
+0.37 \\
+0.08 \\
+0.33 \\
+0.20 \end{pmatrix}
+\end{split}\]</div>
+<p>Di sini, kita mengalikan matriks (A) dengan vektor (\mathbf{v}) untuk mendapatkan vektor peringkat yang baru.</p>
 </section>
 <section id="iterasi-kedua">
 <h4>Iterasi Kedua<a class="headerlink" href="#iterasi-kedua" title="Link to this heading">#</a></h4>
-<p>[ A^2 \mathbf{v} = A \cdot (\mathbf{Av}) = \begin{pmatrix} 0.43 \ 0.12 \ 0.27 \ 0.16 \end{pmatrix} ]
-Kita ulangi proses ini dengan mengalikan matriks (A) dengan hasil dari iterasi sebelumnya.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^2 \mathbf{v} = A \cdot (\mathbf{Av}) =
+\begin{pmatrix}
+0.43 \\
+0.12 \\
+0.27 \\
+0.16 \end{pmatrix}
+\end{split}\]</div>
+<p>Kita ulangi proses ini dengan mengalikan matriks A dengan hasil dari iterasi sebelumnya.</p>
 </section>
 <section id="iterasi-selanjutnya">
 <h4>Iterasi Selanjutnya<a class="headerlink" href="#iterasi-selanjutnya" title="Link to this heading">#</a></h4>
-<p>Proses ini dilanjutkan hingga vektor peringkat tidak berubah secara signifikan antara iterasi, yang menunjukkan bahwa PageRank telah mencapai keseimbangan. Berikut adalah hasil beberapa iterasi berikutnya:
-$<span class="math notranslate nohighlight">\(
+<p>Proses ini dilanjutkan hingga vektor peringkat tidak berubah secara signifikan antara iterasi, yang menunjukkan bahwa PageRank telah mencapai keseimbangan. Berikut adalah hasil beberapa iterasi berikutnya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A^3 \mathbf{v} = \begin{pmatrix} 0.35 \\ 0.14 \\ 0.29 \\ 0.20 \end{pmatrix}
 A^4 \mathbf{v} = \begin{pmatrix} 0.39 \\ 0.11 \\ 0.29 \\ 0.19 \end{pmatrix}
 A^5 \mathbf{v} = \begin{pmatrix} 0.39 \\ 0.11 \\ 0.29 \\ 0.19 \end{pmatrix}
- A^6 \mathbf{v} = \begin{pmatrix} 0.38 \\ 0.13 \\ 0.29 \\ 0.19 \end{pmatrix}
+A^6 \mathbf{v} = \begin{pmatrix} 0.38 \\ 0.13 \\ 0.29 \\ 0.19 \end{pmatrix}
 A^7 \mathbf{v} = \begin{pmatrix} 0.38 \\ 0.12 \\ 0.29 \\ 0.19 \end{pmatrix}
 A^8 \mathbf{v} = \begin{pmatrix} 0.38 \\ 0.12 \\ 0.29 \\ 0.19 \end{pmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 </section>
 </section>
 <section id="konvergensi">
 <h3>4. Konvergensi<a class="headerlink" href="#konvergensi" title="Link to this heading">#</a></h3>
-<p>Setelah beberapa iterasi, vektor peringkat stabil pada nilai tertentu. Ini disebut sebagai nilai keseimbangan atau PageRank akhir. Nilai PageRank akhir adalah:
+<p>Setelah beberapa iterasi, vektor peringkat stabil pada nilai tertentu. Ini disebut sebagai nilai keseimbangan atau PageRank akhir. Nilai PageRank akhir adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{v^*} =
+\begin{pmatrix}
+0.38 \\
+0.12 \\
+0.29 \\
+0.19 \end{pmatrix}
+\end{split}\]</div>
+<p>kita akan mengganti nilai awal vektor peringkat  <span class="math notranslate nohighlight">\((\mathbf{v})\)</span> dengan nilai yang berbeda dan melihat bagaimana iterasi PageRank bekerja. Misalkan kita mulai dengan distribusi awal yang berbeda, seperti:
 $<span class="math notranslate nohighlight">\(
-{v^*} = \begin{pmatrix} 0.38 \\ 0.12 \\ 0.29 \\ 0.19 \end{pmatrix}
-\)</span>$</p>
-<p>kita akan mengganti nilai awal vektor peringkat (v) dengan nilai yang berbeda dan melihat bagaimana iterasi PageRank bekerja. Misalkan kita mulai dengan distribusi awal yang berbeda, seperti:
-$<span class="math notranslate nohighlight">\(
-mathbf{v} = \begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}
+\mathbf{v}=
+\begin{pmatrix}
+0.4 \\
+0.3 \\
+0.2 \\
+0.1 \end{pmatrix}
 \)</span>$</p>
 <p>Berikut adalah penjelasan dan penyelesaian lengkap dengan perubahan nilai awal vektor peringkat.</p>
 </section>
@@ -505,50 +533,90 @@ mathbf{v} = \begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}
 <li><p>C menautkan ke B dan D</p></li>
 <li><p>D menautkan ke C</p></li>
 </ul>
-<p>Buat matriks transisi (A) dan hitung nilai PageRank setelah beberapa iterasi menggunakan algoritma PageRank dengan nilai awal vektor peringkat (\mathbf{v}) sebagai
-$<span class="math notranslate nohighlight">\(
-(\begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}\)
-\)</span>$</p>
+<p>Buat matriks transisi A dan hitung nilai PageRank setelah beberapa iterasi menggunakan algoritma PageRank dengan nilai awal vektor peringkat <span class="math notranslate nohighlight">\((\mathbf{v})\)</span> sebagai</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+0.4 \\
+0.3 \\
+0.2 \\
+0.1 \end{pmatrix}
+\end{split}\]</div>
 </section>
 <section id="penyelesaian">
-<h3>Penyelesaian<a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h3>
-<ol class="arabic">
-<li><p><strong>Matriks Transisi (A):</strong>
-$$</p>
-<p>A = \begin{pmatrix}
-0 &amp; 1 &amp; 0 &amp; 0 \
-0.5 &amp; 0 &amp; 0.5 &amp; 0 \
-0 &amp; 0 &amp; 0 &amp; 1 \
-0.5 &amp; 0 &amp; 0.5 &amp; 0 \
-\end{pmatrix}
-$$</p>
-</li>
-<li><p><strong>Distribusi Awal:</strong>
-$<span class="math notranslate nohighlight">\(
-{v} = \begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}
-\)</span>$</p></li>
-<li><p><strong>Iterasi Pembaruan Peringkat:</strong>
-$<span class="math notranslate nohighlight">\(
-f{Av} = A \cdot \mathbf{v} = \begin{pmatrix} 0.3 \\ 0.3 \\ 0.1 \\ 0.3 \end{pmatrix}
-\)</span>$</p></li>
+<h3><strong>Penyelesaian</strong><a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Matriks Transisi (A):</strong></p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-   A^2 \mathbf{v} = A \cdot (\mathbf{Av}) = \begin{pmatrix} 0.3 \\ 0.2 \\ 0.3 \\ 0.2 \end{pmatrix}
+A = \begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0.5 &amp; 0 &amp; 0.5 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0.5 &amp; 0 &amp; 0.5 &amp; 0 \\
+\end{pmatrix}
 \end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Distribusi Awal:</strong>
+$<span class="math notranslate nohighlight">\(
+{v} = \begin{pmatrix}
+0.4 \\
+0.3 \\
+0.2 \\
+0.1 \end{pmatrix}
+\)</span>$</p></li>
+<li><p><strong>Iterasi Pembaruan Peringkat:</strong>
+$<span class="math notranslate nohighlight">\(
+f{Av} = A \cdot \mathbf{v} =
+\begin{pmatrix}
+0.3 \\
+0.3 \\
+0.1 \\
+0.3 \end{pmatrix}
+\)</span>$</p></li>
+</ol>
+<p>\</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-   A^3 \mathbf{v} = A \cdot (A^2 \mathbf{v}) = \begin{pmatrix} 0.2 \\ 0.3 \\ 0.2 \\ 0.3 \end{pmatrix}
+A^2 \mathbf{v} = A \cdot (\mathbf{Av}) =
+\begin{pmatrix}
+0.3 \\
+0.2 \\
+0.3 \\
+0.2 \end{pmatrix}
 \end{split}\]</div>
+<p>\</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-   A^4 \mathbf{v} = A \cdot (A^3 \mathbf{v}) = \begin{pmatrix} 0.3 \\ 0.2 \\ 0.3 \\ 0.2 \end{pmatrix}
+A^3 \mathbf{v} = A \cdot (A^2 \mathbf{v}) =
+\begin{pmatrix}
+0.2 \\
+0.3 \\
+0.2 \\
+0.3 \end{pmatrix}
+\end{split}\]</div>
+<p>\</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^4 \mathbf{v} =
+A \cdot (A^3 \mathbf{v}) =
+\begin{pmatrix}
+0.3 \\
+0.2 \\
+0.3 \\
+0.2 \end{pmatrix}
 \end{split}\]</div>
 <ol class="arabic simple" start="4">
 <li><p><strong>Konvergensi:</strong>
 Setelah beberapa iterasi, nilai PageRank tidak berubah signifikan dan tetap sama, yaitu:
 $<span class="math notranslate nohighlight">\(
-\mathbf{v^*} = \begin{pmatrix} 0.3 \\ 0.2 \\ 0.3 \\ 0.2 \end{pmatrix}
+\mathbf{v^*} =
+\begin{pmatrix}
+0.3 \\
+0.2 \\
+0.3 \\
+0.2 \end{pmatrix}
 \)</span>$</p></li>
 </ol>
 <p>Dalam kasus ini, nilai PageRank akhirnya menunjukkan bahwa halaman A dan C memiliki kepentingan yang sama, sedangkan halaman B dan D juga memiliki kepentingan yang sama namun lebih rendah dibandingkan A dan C.</p>
@@ -556,9 +624,13 @@ $<span class="math notranslate nohighlight">\(
 </section>
 <section id="penyelesaian-dengan-python">
 <h2>Penyelesaian dengan Python<a class="headerlink" href="#penyelesaian-dengan-python" title="Link to this heading">#</a></h2>
-<p>Berikut adalah implementasi PageRank menggunakan Python dengan nilai awal vektor peringkat (\mathbf{v}) sebagai
+<p>Berikut adalah implementasi PageRank menggunakan Python dengan nilai awal vektor peringkat <span class="math notranslate nohighlight">\((\mathbf{v})\)</span> sebagai
 $<span class="math notranslate nohighlight">\(
-(\begin{pmatrix} 0.4 \\ 0.3 \\ 0.2 \\ 0.1 \end{pmatrix}\)
+\begin{pmatrix}
+0.4 \\
+0.3 \\
+0.2 \\
+0.1 \end{pmatrix}
 \)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -735,7 +807,7 @@ v8 adalah  :
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Transformasi Matriks</strong></p>
+        <p class="prev-next-title"><strong>Tugas 5 - Transformasi Matriks</strong></p>
       </div>
     </a>
 </div>
@@ -754,8 +826,7 @@ v8 adalah  :
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>page rank</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank-dengan-pendekatan-sistem-dinamis">Algoritma PageRank dengan Pendekatan Sistem Dinamis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank-dengan-pendekatan-sistem-dinamis"><strong>Algoritma PageRank dengan Pendekatan Sistem Dinamis</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">Pendahuluan</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-dasar-pagerank">Konsep Dasar PageRank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-algoritma-pagerank">Langkah-langkah Algoritma PageRank</a><ul class="nav section-nav flex-column">
@@ -772,15 +843,12 @@ v8 adalah  :
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-dan-penyelesaian">Contoh Soal dan Penyelesaian</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal">Soal</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian"><strong>Penyelesaian</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-dengan-python">Penyelesaian dengan Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

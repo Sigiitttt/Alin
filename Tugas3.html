@@ -185,9 +185,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas2.html"><strong>Tugas 2 - Aljabar Matriks</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 3 - Matriks Invers</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Determinan%20matriks.html"><strong>Tugas 4 - Determinan Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tranformasimatriks.html"><strong>Transformasi Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="aplikasikal.html"><strong>page rank</strong></a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="tranformasimatriks.html"><strong>Tugas 5 - Transformasi Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="aplikasikal.html"><strong>Tugas 6 - page range</strong></a></li>
 </ul>
 
     </div>
@@ -387,7 +386,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-mencari-invers-matriks-dengan-gauss-jordan">Langkah-langkah Mencari Invers Matriks dengan Gauss-Jordan</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-koefisien-a">Matriks Koefisien (A)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-hasil-b">Vektor Hasil (b)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented-a-b">Matriks Augmented ([A | b])</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented-a-b">Matriks Augmented <span class="math notranslate nohighlight">\(([A | b])\)</span></a></li>
 </ul>
 </li>
 </ul>
@@ -432,27 +431,27 @@ document.write(`
 </li>
 <li><p><strong>Invers dari Perkalian Matriks</strong>:</p>
 <ul class="simple">
-<li><p>Invers dari hasil kali dua atau lebih matriks adalah hasil kali invers-inversnya dalam urutan terbalik. Jika A dan B keduanya nonsingular, maka <span class="math notranslate nohighlight">\( AB^-1 \)</span> = B^-1 A^-1.</p></li>
-<li><p>Ketika dua atau lebih matriks dikalikan, invers dari hasil kali tersebut sama dengan perkalian invers-invers dari matriks-matriks tersebut dalam urutan terbalik. Jika A dan B adalah matriks non-singular, maka invers dari AB adalah <span class="math notranslate nohighlight">\(B^-1\)</span>  A^<span class="math notranslate nohighlight">\(-1\)</span></p></li>
+<li><p>Invers dari hasil kali dua atau lebih matriks adalah hasil kali invers-inversnya dalam urutan terbalik. Jika A dan B keduanya nonsingular, maka <span class="math notranslate nohighlight">\(( AB^-1 )\)</span> = <span class="math notranslate nohighlight">\((B^-1 A^-1)\)</span>.</p></li>
+<li><p>Ketika dua atau lebih matriks dikalikan, invers dari hasil kali tersebut sama dengan perkalian invers-invers dari matriks-matriks tersebut dalam urutan terbalik. Jika A dan B adalah matriks non-singular, maka invers dari AB adalah <span class="math notranslate nohighlight">\((B^-1)\)</span>  <span class="math notranslate nohighlight">\(( A^-1 )\)</span></p></li>
 </ul>
 </li>
 </ol>
 <p><strong>Mencari Invers dengan Eliminasi Gauss-Jordan Dalam metode Gauss-Jordan</strong></p>
-<p>kita menggunakan Operasi Baris Elementer (OBE) untuk mengubah sebuah matriks menjadi bentuk identitas. Operasi OBE terdiri dari tiga jenis, yaitu:</p>
+<p>kita menggunakan Operasi Baris Elementer <span class="math notranslate nohighlight">\((OBE)\)</span> untuk mengubah sebuah matriks menjadi bentuk identitas. Operasi OBE terdiri dari tiga jenis, yaitu:</p>
 <ol class="arabic simple">
 <li><p><strong>Menambahkan kelipatan baris ke baris yang lain</strong>:</p>
 <ul class="simple">
-<li><p>Anda dapat menambahkan kelipatan suatu baris ke baris yang lain untuk mengeliminasi elemen-elemen tertentu. Misalnya, jika Anda memiliki baris ( R_i) dan ( R_j ), Anda dapat mengganti ( R_j ) dengan <span class="math notranslate nohighlight">\( R_j + k \)</span>t R_i $, di mana ( k ) adalah suatu konstanta.</p></li>
+<li><p>Anda dapat menambahkan kelipatan suatu baris ke baris yang lain untuk mengeliminasi elemen-elemen tertentu. Misalnya, jika Anda memiliki baris <span class="math notranslate nohighlight">\(( R_i)\)</span> dan <span class="math notranslate nohighlight">\(( R_j )\)</span>, Anda dapat mengganti <span class="math notranslate nohighlight">\(( R_j )\)</span> dengan <span class="math notranslate nohighlight">\( (R_j)\)</span> + <span class="math notranslate nohighlight">\((k cdot R_i )\)</span>, di mana <span class="math notranslate nohighlight">\(( k )\)</span> adalah suatu konstanta.</p></li>
 </ul>
 </li>
 <li><p><strong>Mengalikan baris dengan bilangan selain nol</strong>:</p>
 <ul class="simple">
-<li><p>Anda dapat mengalikan seluruh elemen dalam satu baris dengan suatu bilangan bukan nol. Misalnya, jika Anda memiliki baris ( R_i ), Anda dapat menggantinya dengan ( k cdot R_i ), di mana ( k neq 0 ).</p></li>
+<li><p>Anda dapat mengalikan seluruh elemen dalam satu baris dengan suatu bilangan bukan nol. Misalnya, jika Anda memiliki baris <span class="math notranslate nohighlight">\(( R_i )\)</span>, Anda dapat menggantinya dengan <span class="math notranslate nohighlight">\(( k cdot R_i )\)</span>, di mana <span class="math notranslate nohighlight">\(( k neq 0 )\)</span>.</p></li>
 </ul>
 </li>
 <li><p><strong>Menukarkan posisi baris satu dengan baris yang lain</strong>:</p>
 <ul class="simple">
-<li><p>Anda dapat menukar posisi dua baris. Misalnya, Anda dapat menukar baris ( R_i ) dengan baris ( R_j ).</p></li>
+<li><p>Anda dapat menukar posisi dua baris. Misalnya, Anda dapat menukar baris <span class="math notranslate nohighlight">\(( R_i )\)</span> dengan baris <span class="math notranslate nohighlight">\(( R_j )\)</span>.</p></li>
 </ul>
 </li>
 </ol>
@@ -461,17 +460,17 @@ document.write(`
 <ol class="arabic simple">
 <li><p><strong>Gabungkan matriks A dengan matriks identitas I</strong>:</p>
 <ul class="simple">
-<li><p>Jika Anda memiliki matriks ( A ) berukuran ( n times n ), buat matriks augmented ( [A | I] ), di mana ( I ) adalah matriks identitas berukuran ( n times n ).</p></li>
+<li><p>Jika Anda memiliki matriks <span class="math notranslate nohighlight">\(( A )\)</span> berukuran <span class="math notranslate nohighlight">\(( n times n )\)</span>, buat matriks augmented <span class="math notranslate nohighlight">\(( [A | I] )\)</span>, di mana <span class="math notranslate nohighlight">\(( I )\)</span> adalah matriks identitas berukuran ( n times n )$$.</p></li>
 </ul>
 </li>
 <li><p><strong>Gunakan Operasi Baris Elementer (OBE) untuk mengubah ( A ) menjadi ( I )</strong>:</p>
 <ul class="simple">
-<li><p>Terapkan OBE pada matriks augmented ( [A | I] ) untuk mengubah bagian ( A ) menjadi matriks identitas ( I ). Lakukan ini dengan mengikuti aturan OBE yang disebutkan di atas.</p></li>
+<li><p>Terapkan OBE pada matriks augmented <span class="math notranslate nohighlight">\(( [A | I] )\)</span> untuk mengubah bagian <span class="math notranslate nohighlight">\(( A )\)</span> menjadi matriks identitas <span class="math notranslate nohighlight">\(( I )\)</span>. Lakukan ini dengan mengikuti aturan OBE yang disebutkan di atas.</p></li>
 </ul>
 </li>
 <li><p><strong>Peroleh invers matriks dari bagian kanan matriks augmented</strong>:</p>
 <ul class="simple">
-<li><p>Setelah bagian ( A ) dari matriks augmented ( [A | I] ) menjadi matriks identitas, bagian kanan yang tadinya adalah ( I ) akan berubah menjadi invers dari ( A ), yaitu <span class="math notranslate nohighlight">\(A^-1\)</span></p></li>
+<li><p>Setelah bagian <span class="math notranslate nohighlight">\(( A )\)</span> dari matriks augmented <span class="math notranslate nohighlight">\(( [A | I] )\)</span> menjadi matriks identitas, bagian kanan yang tadinya adalah <span class="math notranslate nohighlight">\(( I )\)</span> akan berubah menjadi invers dari <span class="math notranslate nohighlight">\(( A )\)</span>, yaitu <span class="math notranslate nohighlight">\((A^-1)\)</span></p></li>
 </ul>
 </li>
 </ol>
@@ -518,7 +517,7 @@ x_1 + 2x_2 + x_3 + 4x_4 + 6x_5 + 2x_6 &amp;= 25 \\
 \end{split}\]</div>
 </section>
 <section id="matriks-augmented-a-b">
-<h3>Matriks Augmented ([A | b])<a class="headerlink" href="#matriks-augmented-a-b" title="Link to this heading">#</a></h3>
+<h3>Matriks Augmented <span class="math notranslate nohighlight">\(([A | b])\)</span><a class="headerlink" href="#matriks-augmented-a-b" title="Link to this heading">#</a></h3>
 <p>Untuk menyelesaikan sistem persamaan ini menggunakan metode eliminasi Gauss-Jordan, kita membentuk matriks augmented dengan menggabungkan matriks (A) dan vektor (b):</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1642,7 +1641,7 @@ Pembulatan Matrix I =
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-mencari-invers-matriks-dengan-gauss-jordan">Langkah-langkah Mencari Invers Matriks dengan Gauss-Jordan</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-koefisien-a">Matriks Koefisien (A)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-hasil-b">Vektor Hasil (b)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented-a-b">Matriks Augmented ([A | b])</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented-a-b">Matriks Augmented <span class="math notranslate nohighlight">\(([A | b])\)</span></a></li>
 </ul>
 </li>
 </ul>
